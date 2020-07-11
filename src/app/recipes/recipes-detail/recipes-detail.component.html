@@ -1,0 +1,23 @@
+<div class="recipes-detail-container">
+<div>
+    <div style="background-image:url({{r.imagePath}})" class="size" #size1 (mouseleave)="funcLeave()" (mouseenter)="funcEnter()"></div>
+    <!-- <img [src]="r.imagePath" alt="no image" class="size"> -->
+</div>
+<div>
+    <div><h1>{{r.name}}</h1></div>
+    <div class="manage-recipe" >
+        <div class="blue-box" (click)="manageRecipeClick= !manageRecipeClick" #search2>Manage Recipe <span *ngIf="!manageRecipeClick; else elseblock">&#11206;</span><ng-template #elseblock><span>&#11205;</span></ng-template></div>
+        <ul *ngIf="manageRecipeClick" id="dropdown">
+            <a (click)="toShoppingList()"><li>To shopping list</li></a>
+            <a [routerLink]="['../edit']"> <li>Edit recipe</li></a>
+            <a (click)="onDeleteRecipe()"><li>Delete recipe</li></a>
+        </ul>
+    </div>
+    <div>{{r.description}}</div>
+    <div class="ingred">
+        <ul  *ngFor="let in of r.ingredients">
+            <li>{{in.name}} - {{in.amount}}</li>
+        </ul>
+    </div>
+</div>
+</div>

@@ -1,0 +1,26 @@
+.recipes-container{
+    width:100%;
+}
+.box1{
+    width:50%;
+    box-sizing: border-box;
+    float:left;
+    /* border:1px solid red; */
+}
+.box2{
+    width:50%;
+    float:left;
+    box-sizing: border-box;
+    /* border:1px solid red; */
+}
+.clear{
+    clear: both;
+}
+@media(max-width:770px){
+    .box1{
+        width:100%;
+    }
+    .box2{
+        width:100%;
+    }
+}

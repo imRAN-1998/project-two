@@ -1,0 +1,34 @@
+<div class="main">
+    <div class="container">
+        <!-- <div class=error *ngIf="error">
+            <p >{{ error }}</p>
+            <button type="button"(click)="error=null">Ok</button> 
+        </div> -->
+        <app-alert [message]="error" *ngIf="error" (output1)="closeFunc($event)"></app-alert>
+        <div *ngIf="isloading" style="text-align: center;">
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="myForm" *ngIf="!isloading">
+            <div>
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" id="email" formControlName="email">
+                <div *ngIf="myForm.get('email').invalid">
+                    <p *ngIf="myForm.get('email').errors['required']&&myForm.get('email').touched">Enter the data</p>
+                    <p *ngIf="myForm.get('email').errors['email']&&myForm.get('email').touched">Enter a valid email</p>
+                </div>
+            </div>
+            <div>
+                <label for="email"><strong>Password</strong></label>
+                <input type="password" id="password" formControlName="password">
+                <div *ngIf="myForm.get('password').invalid">
+                    <p *ngIf="myForm.get('password').errors['required']&&myForm.get('password').touched">Enter the password</p>
+                    <p *ngIf="myForm.get('password').errors['minlength']&&myForm.get('password').touched">Enter atleast 8 char..</p>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit" class="btn green" [disabled]="myForm.invalid">{{loginMode ? 'Login' : 'SignUp'}}</button> | 
+                <button type="button" class="btn blue" (click)="changeMode()">Switch to {{loginMode ? 'SignUp': 'Login'}}</button>
+            </div>
+        </form>
+    </div>
+</div>

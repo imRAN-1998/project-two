@@ -1,0 +1,18 @@
+<div>
+    <form class="myform-edit" (ngSubmit)="onSubmit(newVar1)" #newVar1="ngForm">
+        <div class="shopping-edit-box-1">
+            <label><strong>Name</strong></label>
+            <input type="text" class="text-type-edit" ngModel name="name" required>
+        </div>
+        <div class="shopping-edit-box-2">
+            <label><strong>Amount</strong></label>
+            <input type="number" class="text-type-edit"  name="amount" ngModel required min="1" pattern="^[1-9]+[0-9]*$">
+        </div>
+        <div class="clr"></div>
+        <div>
+            <button type="submit" class="btn green" [disabled]="newVar1.invalid">{{editMode ? 'Update' : 'Add'}}</button>
+            <button type="button" class="btn red"(click)="onDelete()" *ngIf="editMode">Delete</button>
+            <button type="button" class="btn blue" (click)="onClear()">Clear</button>
+        </div>
+    </form>
+</div>

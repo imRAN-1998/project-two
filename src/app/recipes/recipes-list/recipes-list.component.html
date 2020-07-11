@@ -1,0 +1,17 @@
+<div>
+    <div class="green-btn"><a [routerLink]="['new']">New Recipe</a></div>
+    <div style="margin-top:10px;"></div>
+    <hr>
+    <div style="margin-top:10px;"></div>
+    <div style="text-align: center;" *ngIf="fetchLoading&&recipes.length===0">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+    <app-recipes-item 
+    *ngFor =" let r of recipes;index as i" 
+    [toChildItem]="r" [indexValue]="i"
+    ></app-recipes-item>
+</div>
+
+
+
+

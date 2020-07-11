@@ -1,0 +1,18 @@
+<div class="header-container">
+    <ul>
+        <li class="left-box"><div><h2>  <a class="a" routerLink="/"> Recipes Book</a></h2></div></li>
+        <li class="left-box padding" routerLinkActive = "active" *ngIf="LoggedIn"><div><h4>  <a class="a"routerLink="recipes" > Recipes</a></h4></div></li>
+        <li class="left-box padding" routerLinkActive = "active" *ngIf="!LoggedIn"><div><h4>  <a class="a"routerLink="auth"> Authenticate</a></h4></div></li>
+        <li class="left-box padding" routerLinkActive = "active"><div><h4>  <a class="a" routerLink= "shoppingList"> Shopping list</a></h4></div></li>
+        <li class="right-box padding1 med" *ngIf="LoggedIn"><div class="innerbond" ><div  #child1><h4 (click)="clickManage= !clickManage" class="search1">Manage <span *ngIf="!clickManage; else elseblock" class="square">&#11206; </span><ng-template #elseblock><span>&#11205;</span></ng-template></h4></div>
+            <!-- <div class="clr"></div> -->
+            <ul class="abs" *ngIf="clickManage" id="dropdown">
+                <li (click)="onSaveData()"><a >Save Data</a></li>
+                <li (click)="onFetchData()"><a >Fetch Data</a></li>
+            </ul> 
+        </div>
+    </li>
+    <li class="right-box padding med" routerLinkActive = "active" *ngIf="LoggedIn"><div><h4>  <a class="a" (click)="logOut()"> LogOut</a></h4></div></li>
+    </ul>
+    <div class="clr"></div>
+</div>

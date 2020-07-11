@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding:0;
+}
+h1{
+    margin:0;
+    padding:0;
+}
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+.clr{
+    clear: both;
+}
+li{
+    list-style-type: none;
+}
+.abs{
+    position: absolute;
+}
+.btn{
+    /* width:70px; */
+    padding:10px;
+    /* box-sizing:border-box; */
+    font-size:15px;
+    border-radius:3px;  
+    border-style:solid;
+    outline: none;
+}
+.green{
+    color:white;
+    background-color: rgba(65, 151, 65, 0.8);
+    border-color:rgba(65, 151, 65, 0.3);
+}
+.red{
+    color:white;
+    background-color: rgba(238, 10, 10, 0.6);
+    border-color:rgba(238, 10, 10, 0.1);
+}
+.blue{
+    color:white;
+    background-color: rgba(7, 7, 126,0.7);
+    border-color:rgba(7, 7, 126,0.1);
+}
+.green:hover{
+    cursor: pointer;
+    background-color:rgba(5, 99, 5,1);
+    border-color:rgba(5, 99, 5,1);
+}
+.red:hover{
+    cursor: pointer;
+    background-color: rgba(238, 10, 10, 1);
+    border-color:rgba(238, 10, 10, 1);
+}
+.blue:hover{
+    cursor: pointer;
+    background-color: rgba(7, 7, 126,1);
+    border-color:rgba(7, 7, 126,1);
+}

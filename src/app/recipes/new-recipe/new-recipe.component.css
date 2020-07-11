@@ -1,0 +1,45 @@
+.container{
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+    /* border:1px solid black; */
+}
+input,textarea,button{
+    outline:none;
+}
+.myform1 label{
+    display:block;
+    font-weight: bold;
+    line-height: 2em;
+}
+.mainInputs input{
+    width:100%;
+    padding:7px;
+    box-sizing: border-box;
+}
+textarea{
+    width:100%;
+}
+.secondInputs input[type="text"]{
+    padding: 5px;
+    width:60%;
+    margin-right:5px;
+}
+.secondInputs input[type="number"]{
+    padding: 5px;
+    width:20%;
+    margin-right:5px;
+}
+.btn1{
+    padding:5px;
+    border-radius:3px;  
+    border-style:solid;
+}
+input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched{
+    border:1px solid red;
+}
+.btn1{
+    border-radius:3px;  
+    border-style:solid;
+    outline: none;
+}

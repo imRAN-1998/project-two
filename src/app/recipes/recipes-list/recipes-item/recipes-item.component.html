@@ -1,0 +1,13 @@
+<div class="recipes-list-li" routerLinkActive="active">
+    <a  (click)=onclicka() [routerLink]="[id,'detail']" >
+        <ul>
+            <li class="recipes-list-left">
+                <div><div class="inner-float"><h3>{{r.name}}</h3></div>
+                <div class="clr"></div>
+                <div style="width:200px;"><p>{{r.description}}</p></div></div>
+            </li>
+            <li class="recipes-list-right"><img src="{{r.imagePath}}" alt="r.name" class="image-size"></li>
+        </ul>
+        <div class="clr"></div>
+    </a>
+    </div>

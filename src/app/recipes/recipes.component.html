@@ -1,0 +1,13 @@
+<div class="recipes-container">
+    <div class="box1">
+        <app-recipes-list ></app-recipes-list>
+    </div>
+    <div class="box2">
+        <!-- <app-recipes-detail *ngIf="dataFromList ; else elseblock"[recDetailed]="dataFromList"></app-recipes-detail>
+        <ng-template #elseblock>
+            <p>Please select any recipe to view it!!!!</p>
+        </ng-template> -->
+        <router-outlet></router-outlet>
+    </div>
+    <div class="clear"></div>
+</div> 

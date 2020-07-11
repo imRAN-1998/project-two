@@ -1,0 +1,10 @@
+.the-list-a{
+    padding:15px;
+    box-sizing: border-box;
+    border:1px solid lightgray;
+    float:left;
+    width:100%;
+}
+.the-list-a:hover{
+    background-color: lightgrey;
+}

@@ -1,0 +1,14 @@
+.green-btn{
+    background-color:rgba(65, 151, 65, 0.8);
+    padding:11px;
+    width:100px;
+    border-radius:4px;
+    /* box-shadow: 1px 1px 1px rgb(6, 44, 6); */
+}
+.green-btn:hover{
+    background-color:rgba(5, 99, 5,1);
+}
+.green-btn a{
+    color:white;
+}
+

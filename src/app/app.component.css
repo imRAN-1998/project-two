@@ -1,0 +1,12 @@
+.appcontainer{
+    width: 80%;
+    height:600px;
+    margin:auto;
+    /* border:1px solid black; */
+}
+
+app-shopping-list{
+    /* border:1px solid blue; */
+    float:right;
+    width:100%;
+}

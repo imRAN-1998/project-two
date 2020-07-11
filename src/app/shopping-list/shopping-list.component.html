@@ -1,0 +1,14 @@
+<div>
+    <div>
+        <app-shopping-edit ></app-shopping-edit>
+    </div>
+    <div style="margin:20px;"></div>
+    <hr>
+    <div style="margin:20px;"></div>
+    <div>
+        <ul >
+           <a (click)="selectItem(in)" class="the-list-a" *ngFor = "let i of ingredient;index as in">{{i.name}} ({{i.amount}})</a>
+        </ul>
+        <div class="clr"></div>
+    </div>
+</div>

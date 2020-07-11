@@ -1,0 +1,53 @@
+.myform-edit input[type="text"],input[type="number"]{
+    display:block;
+}
+.myform-edit{
+    line-height:2em;
+}
+.shopping-edit-box-1{
+    width:40%;
+    padding:15px 15px 15px 0px;
+    float:left;
+    /* border: 1px solid red; */
+}
+.shopping-edit-box-2{
+    width:20%;
+    padding:15px 15px 15px 0px;
+    /* border: 1px solid red; */
+    float:left;
+}
+input[type="text"].text-type-edit{
+    padding:10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius:5px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 2px;
+    width:80%;
+}
+input[type="number"].text-type-edit{
+    padding:10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius:5px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 2px;
+    width:100px;
+}
+button.red,button.green,button.blue{
+    margin-right:5px;
+}
+button.red:hover{
+    background-color: rgba(238, 10, 10, 1);
+    border-color:rgba(238, 10, 10, 1);
+}
+button.green:hover{
+    background-color: rgba(5, 99, 5,1);
+    border-color: rgba(5, 99, 5,1);
+}
+button.blue:hover{
+    background-color: rgba(7, 7, 126,0.9);
+    border-color:rgba(7, 7, 126,0.9);
+}
