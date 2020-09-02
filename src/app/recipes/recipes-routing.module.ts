@@ -15,7 +15,7 @@ const routes1 : Routes=[
         {path : ':id/detail' , component : RecipesDetailComponent, resolve:[LoadingResolverService]}
     ]}
 ];
-
+ 
 @NgModule({
  imports : [
     RouterModule.forChild(routes1)

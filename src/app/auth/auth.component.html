@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div>
-                <label for="email"><strong>Password</strong></label>
+                <label for="password"><strong>Password</strong></label>
                 <input type="password" id="password" formControlName="password">
                 <div *ngIf="myForm.get('password').invalid">
                     <p *ngIf="myForm.get('password').errors['required']&&myForm.get('password').touched">Enter the password</p>

@@ -1,8 +1,11 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+
 import {Recipe} from '../recipe.model';
 import { RecipesServices } from '../recipes.service';
-import { Subscription } from 'rxjs';
 import { DataStorageService } from 'src/app/shared/data-storage.service';
+import * as fromApp from '../../store/app.reducer';
 // import { EventEmitter } from 'protractor';
 @Component({
   selector: 'app-recipes-list',
@@ -23,13 +26,18 @@ export class RecipesListComponent implements OnInit ,OnDestroy{
   // }
   
   constructor(private recipesService1 : RecipesServices,
-    private dataStorage1 :  DataStorageService) { }
+    private dataStorage1 :  DataStorageService,
+    private store1 : Store<fromApp.AppState>) { }
 
   ngOnInit(): void {
-    this.recipes=this.recipesService1.getRecipes();
-    this.subscription1= this.recipesService1.recipeschanged.subscribe((recipes : Recipe[])=>{
-      this.recipes=recipes;
+    this.subscription1=this.store1.select('recipes').subscribe(recipesData=>{
+      this.recipes=recipesData.recipes;
     })
+    // this.recipes=this.recipesService1.getRecipes();
+    // this.subscription1= this.recipesService1.recipeschanged.subscribe((recipes : Recipe[])=>{
+    //   this.recipes=recipes;
+    // })
+
     // this.dataStorage1.fetchData().subscribe(recipes=>{
     //   this.recipes=recipes;
     // })
